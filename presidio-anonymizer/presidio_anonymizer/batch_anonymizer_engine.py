@@ -36,7 +36,7 @@ class BatchAnonymizerEngine:
         if not recognizer_results_list:
             recognizer_results_list = [[] for _ in range(len(texts))]
         for text, recognizer_results in zip(texts, recognizer_results_list):
-            if type(text) in (str, bool, int, float):
+            if type(text) in (str, bool, int, float) and recognizer_results:
                 res = self.anonymizer_engine.anonymize(
                     text=str(text), analyzer_results=recognizer_results, **kwargs
                 )

@@ -133,6 +133,7 @@ vendor/
 #pycharm
 .idea/*
 .idea
+.history
 
 #mkdocs
 mkdocs/
